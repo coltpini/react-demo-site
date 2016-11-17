@@ -1,0 +1,13 @@
+@import './font.css';
+
+:root {
+    /* primary */
+    --theme-color-100: var(--blue);
+    /* secondary */
+    --theme-color-200: var(--green);
+
+    /* accent */
+    --theme-color-300: var(--blue-300);
+    --theme-color-400: var(--green-300);
+    --theme-color-500: var(--blue-600);
+}

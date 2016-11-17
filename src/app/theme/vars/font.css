@@ -1,0 +1,13 @@
+:root {
+
+    --h1-sans: normal normal bold var(--font-size-1300)/var(--line-height-400) var(--sans);
+    --h2-sans: normal normal 100 var(--font-size-800)/var(--line-height-400) var(--sans);
+    --h3-sans: normal normal bold var(--font-size-500)/var(--line-height-400) var(--sans);
+    --h5-sans: normal normal bold var(--font-size-500)/var(--line-height-400) var(--sans);
+
+    --h1-serif: normal normal normal var(--font-size-1300)/var(--line-height-400) var(--serif);
+    --h1-serif-informal: italic normal bold var(--font-size-1200)/var(--line-height-400) var(--serif);
+    --h4-serif: normal normal normal var(--font-size-500)/var(--line-height-400) var(--serif);
+    --h6-serif: italic normal normal var(--font-size-500)/var(--line-height-400) var(--serif);
+
+}

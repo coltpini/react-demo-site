@@ -1,0 +1,62 @@
+body {
+    color: var(--black-800);
+}
+
+a {
+    color: var(--blue);
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--sans);
+    /*margin: 0 0 var(--spacing-300);*/
+}
+
+
+
+h1 {
+	font: normal normal normal var(--font-size-1200)/1.037 var(--sans);
+	font-weight: 300;
+}
+
+h2 {
+    font-size: var(--font-size-900);
+    line-height: 1.2;
+    font-weight: 100;
+}
+
+h3, h4, h5, h6 {
+    font-size: var(--font-size-500);
+    font-weight: bold;
+}
+
+h3 {
+    line-height: 1.278;
+    letter-spacing: 0.00278em;
+    /*text-transform: uppercase;*/
+}
+
+h4, h5, h6, {
+    line-height: 1.222;
+}
+
+dt {
+    font-size: var(--font-size-500);
+    font-style: italic;
+    font-weight: 400;
+	line-height: var(--line-height-400);
+}
+
+dd {
+    margin: 0;
+    /*margin-left: var(--spacing-500);*/
+}
+
+code {
+    font-family: var(--monospace);
+    white-space: pre-wrap;
+}

@@ -1,0 +1,170 @@
+:root {
+    /* GWeb: latin, The “basic” encoding, supports 85 languages that use the Latin writing system. */
+    --GWeb: U+0000-007F, 00A0-00FE, 0152, 0153, 02C6, 02DA, 02DC, 2013, 2014, 2018, 2019, 201A, 201C, 201D, 201E, 2022, 2039, 203A, 2044, 2074, 20AC, 2122, 2215, FB00-FB04, FFFD
+    /* GWebExt: Extends the GWeb encoding to support additional languages from Europe, Africa, and the Pacific. */
+    --GWebExt: 0020-007E, 00A0-0107, 010A-011B, 011E-0123, 0126-0131, 0136, 0137, 0139-0148, 014A-015B, 015E-0161, 0164, 0165, 0168-017E, 0181, 0186, 0189, 018A, 018F-0192, 0194, 0198, 0199, 01CD-01D0, 01D3, 01D4, 01E6, 01E7, 01EAm 01EB, 01F4, 01F5, )1F8, 01F9, 0218-021B, 0253, 0254, 0256, 0257, 0259, 0263, 02BB, 02BC, 02C6, 02DA, 02DC, 0300-0304, 0306, 0308, 030C, 030D, 0311, 0323, 0327, 0361, 1E3E, 1E3F, 1E44, 1E45, 1E62, 1E63, 1E8C, 1E8D, 1E90, 1E91, 1EB8, 1EB9, 1EBC, 1EBD, 1ECA, 1ECB, 1ECC, 1ECD, 1EE4, 1EE5, 1EF2, 1EF3, 1EF9, 2013, 2014,2018-201A, 201C-201E, 2022, 2039, 203A, 2044, 2074, 20AC, 2116, 2122, 2215, FB00-FB04, FFFD;
+    /* GWebViet: Supports Vietnamese */
+    --GWebViet: 0021-007E, 00A0-00FE, 0102, 0103, 0110, 0111, 0128, 0129, 0152, 0153, 0168, 0169, 01A0, 01A1, 01AF, 01B0, 02C6, 02DA, 02DC, 1EA0-1EF9,  2013, 2014, 2018-201A, 201C-201E, 2022, 2039, 203A, 2044, 2074, 20AC, 2116, 2122, 2215, FB00-FB04, FFFD;
+    /* GWebCyr: Supports six languages that use the Cyrillic writing system. */
+    --GWebCyr: 0020-007E, 00A0-00FE, 0152, 0153, 02C6, 02DA, 02DC, 0300, 0301, 0306, 0400-045F, 0490, 0491, 04B0, 04B1, 2013, 2014, 2018-201A, 201C-201E, 2022, 2039, 203A, 2044, 2074, 20AC, 2116, 2122, 2215, FB00-FB04, FFFD;
+    /* GWebCyrExt: Supports an additional six languages that use the Cyrillic writing system. */
+    --GWebCyrExt: 0021-007E, 00A0-00FE, 0152, 0153, 02C6, 02DA, 02DC, 0300, 0301, 0306, 0400-045F, 0472, 0473, 0490-0493, 04A2, 04A3, 04AE, 04AF, 04B0-04B3, 04B6, 04B7, 04BA, 04BB, 04C1, 04C2, 04D8, 04D9, 04DC, 04DD, 04E2, 04E3, 04E8, 04E9, 04EE, 04EF, 2013, 2014, 2018-201A, 201C-201E, 2022, 2039, 203A, 2044, 2074, 20AC, 2116, 2122, 2215, FB00-FB04, FFFD;
+    /* GWebGr: Supports Greek */
+    --GWebGr: 0021-007E, 00A0-00FE, 0152, 0153, 02C6, 02DA, 02DC, 0374, 0375, 047E, 0384-038A, 038C, 038E-02A1, 03A3-03CE, 03D7, 2013, 2014, 2018-201A, 201C-201E, 2022, 2039, 203A, 2044, 2074, 20AC, 2116, 2122, 2215, FB00-FB04, FFFD;
+    /* GWebMah */
+    --GWebMah: 0021-007E, 00A0-0101, 013B, 013C, 0145, 016, 014C, 014D, 016A, 016B, 0304, 0327, 2013, 2014, 2018-201A, 201C-201E, 2022, 2039, 203A, 2044, 2074, 20AC, 2116, 2122, 2215, FB00-FB04, FFFD;
+}
+
+@font-face {
+    font-family: "Zoram";
+    font-weight: 300;
+    font-style: normal;
+    src:
+        local("ZoramLDSLat-Light"),
+        url(var(--sans-font-GWeb-Light-normal-woff2)) format("woff2"),
+        url(var(--sans-font-GWeb-Light-normal-woff)) format("woff");
+    unicode-range: var(--GWeb);
+}
+
+@font-face {
+    font-family: "Zoram";
+    font-weight: 300;
+    font-style: italic;
+    src:
+        local("ZoramLDSLatLight-Italic"),
+        url(var(--sans-font-GWeb-Light-italic-woff2)) format("woff2"),
+        url(var(--sans-font-GWeb-Light-italic-woff)) format("woff");
+    unicode-range: var(--GWeb);
+}
+
+@font-face {
+    font-family: "Zoram";
+    font-weight: 400;
+    font-style: normal;
+    src:
+        local("ZoramLDSLat"),
+        url(var(--sans-font-GWeb-Regular-normal-woff2)) format("woff2"),
+        url(var(--sans-font-GWeb-Regular-normal-woff)) format("woff");
+    unicode-range: var(--GWeb);
+}
+
+@font-face {
+    font-family: "Zoram";
+    font-weight: 400;
+    font-style: italic;
+    src:
+        local("ZoramLDSLat-Italic"),
+        url(var(--sans-font-GWeb-Regular-italic-woff2)) format("woff2"),
+        url(var(--sans-font-GWeb-Regular-italic-woff)) format("woff");
+    unicode-range: var(--GWeb);
+}
+
+@font-face {
+    font-family: "Zoram";
+    font-weight: 700;
+    font-style: normal;
+    src:
+        local("ZoramLDSLat-Bold"),
+        url(var(--sans-font-GWeb-Bold-normal-woff2)) format("woff2"),
+        url(var(--sans-font-GWeb-Bold-normal-woff)) format("woff");
+    unicode-range: var(--GWeb);
+}
+
+@font-face {
+    font-family: "Zoram";
+    font-weight: 700;
+    font-style: italic;
+    src:
+        local("ZoramLDSLat-BoldItalic"),
+        url(var(--sans-font-GWeb-Bold-italic-woff2)) format("woff2"),
+        url(var(--sans-font-GWeb-Bold-italic-woff)) format("woff");
+    unicode-range: var(--GWeb);
+}
+
+@font-face {
+    font-family: "Zoram";
+    font-weight: 800;
+    font-style: normal;
+    src:
+        local("ZoramLDSLat-ExtraBold"),
+        url(var(--sans-font-GWeb-ExtraBold-normal-woff2)) format("woff2"),
+        url(var(--sans-font-GWeb-ExtraBold-normal-woff)) format("woff");
+    unicode-range: var(--GWeb);
+}
+
+@font-face {
+    font-family: "Zoram";
+    font-weight: 800;
+    font-style: italic;
+    src:
+        local("ZoramLDSLat-ExtraBoldItalic"),
+        url(var(--sans-font-GWeb-ExtraBold-italic-woff2)) format("woff2"),
+        url(var(--sans-font-GWeb-ExtraBold-italic-woff)) format("woff");
+    unicode-range: var(--GWeb);
+}
+
+/*******
+
+Baskerville
+
+*******/
+
+@font-face {
+    font-family: "Baskerville";
+    font-weight: 400;
+    font-style: normal;
+    src:
+        url(var(--sans-font-GWeb-Regular-normal-woff2)) format("woff2"),
+        url(var(--sans-font-GWeb-Regular-normal-woff)) format("woff");
+    unicode-range: var(--GWeb);
+}
+
+@font-face {
+    font-family: "Baskerville";
+    font-weight: 400;
+    font-style: italic;
+    src:
+        url(var(--sans-font-GWeb-Regular-italic-woff2)) format("woff2"),
+        url(var(--sans-font-GWeb-Regular-italic-woff)) format("woff");
+    unicode-range: var(--GWeb);
+}
+
+@font-face {
+    font-family: "Baskerville";
+    font-weight: 500;
+    font-style: normal;
+    src:
+        url(var(--sans-font-GWeb-SemiBold-normal-woff2)) format("woff2"),
+        url(var(--sans-font-GWeb-SemiBold-normal-woff)) format("woff");
+    unicode-range: var(--GWeb);
+}
+
+@font-face {
+    font-family: "Baskerville";
+    font-weight: 500;
+    font-style: italic;
+    src:
+        url(var(--sans-font-GWeb-SemiBold-normal-woff2)) format("woff2"),
+        url(var(--sans-font-GWeb-SemiBold-normal-woff)) format("woff");
+    unicode-range: var(--GWeb);
+}
+
+@font-face {
+    font-family: "Baskerville";
+    font-weight: 700;
+    font-style: normal;
+    src:
+        url(var(--sans-font-GWeb-Bold-normal-woff2)) format("woff2"),
+        url(var(--sans-font-GWeb-Bold-normal-woff)) format("woff");
+    unicode-range: var(--GWeb);
+}
+
+@font-face {
+    font-family: "Baskerville";
+    font-weight: 700;
+    font-style: italic;
+    src:
+        url(var(--sans-font-GWeb-Bold-italic-woff2)) format("woff2"),
+        url(var(--sans-font-GWeb-Bold-italic-woff)) format("woff");
+    unicode-range: var(--GWeb);
+}
