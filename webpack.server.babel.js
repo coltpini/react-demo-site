@@ -15,7 +15,7 @@ export default {
     },
 
     externals: [ nodeExternals({
-        whitelist: ['normalize.css']
+        whitelist: ['normalize.css','colt-demo-tile','colt-demo-landing']
     })],
 
     target: 'node',
