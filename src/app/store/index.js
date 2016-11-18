@@ -1,10 +1,12 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 
-import {isBrowser} from './env.js';
+import nav from './siteNav/reducers.js';
+
+import {isBrowser} from '../env.js';
 
 // create the master reducer
-const rootReducer = combineReducers();
+const rootReducer = combineReducers({nav});
 
 
 // determine initial state

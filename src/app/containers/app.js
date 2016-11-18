@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { init as initNav } from '../actions/site-nav.js';
+import { init as initNav } from '../store/siteNav/actions.js';
 import AppLayout from '../components/AppLayout';
 import mountLoad from '../lib/mount-load';
 import { wrap } from '../lib/ss-resolve';
