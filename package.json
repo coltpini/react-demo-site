@@ -74,6 +74,7 @@
   "dependencies": {
     "better-npm-run": "0.0.8",
     "classnames": "^2.2.1",
+    "colt-demo-landing": "^1.0.1",
     "compression": "^1.6.1",
     "cors": "^2.7.1",
     "dotenv": "^2.0.0",
