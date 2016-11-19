@@ -24,6 +24,9 @@ router.get('/nav', cors(), (req, res) => {
         }
     ]);
 });
+router.get('/title', cors(), (req, res) => {
+    res.send({title: "My Favorite Recipies"});
+});
 
 router.get('/articles',cors(), (req, res) => {
     fetch('https://hapi-demo-api.app.lds.org/api/recipe')
