@@ -29,10 +29,14 @@ router.get('/title', cors(), (req, res) => {
 });
 
 router.get('/articles',cors(), (req, res) => {
-    fetch('https://hapi-demo-api.app.lds.org/api/recipe')
-        .then( response => response.json())
+    fetch('https://medium.com/mofed/latest?format=json')
+        .then( response => response.text() )
+        .then( response => {
+            let json = JSON.parse(response.replace(`])}while(1);</x>`,``) );
+            return json.payload.posts;
+        })
         .then( articles => {
-            res.send( articles.map( ({name: title, steps: teaser, imageURL: img}) => ({title, teaser: teaser[0], img}) ));
+            res.send( articles.map( ({title, virtuals}) => ({title, teaser: virtuals.snippet, img: virtuals.previewImage.imageId !== '' ? `https://cdn-images-1.medium.com/max/1600/${virtuals.previewImage.imageId}` : `http://placekitten.com/g/300/170`}) ));
         })
         .catch((err) => {
             console.error(err);
