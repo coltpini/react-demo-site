@@ -3,11 +3,12 @@ import thunk from 'redux-thunk';
 
 import nav from './siteNav/reducers.js';
 import articleList from './articleList/reducers.js';
+import socialList from './socialList/reducers.js';
 
 import {isBrowser} from '../env.js';
 
 // create the master reducer
-const rootReducer = combineReducers({nav,articleList});
+const rootReducer = combineReducers({nav,articleList,socialList});
 
 
 // determine initial state

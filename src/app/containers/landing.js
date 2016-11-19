@@ -1,17 +1,20 @@
 import { Component as ReactComponent } from 'react';
 import { connect } from 'react-redux';
 
-
 import { getArticles } from '../store/articleList/actions.js';
 import selectArticles from '../store/articleList/selectors.js';
+
+import { getPosts } from '../store/socialList/actions.js';
+import selectPosts from '../store/socialList/selectors.js';
 
 import Landing from 'colt-demo-landing';
 
 
 class LandingContainer extends ReactComponent {
     componentDidMount() {
-        const {init} = this.props;
-        return init && init();
+        const {loadArticles, loadPosts} = this.props;
+        loadArticles();
+        loadPosts();
     }
     render() {
         return <Landing {...this.props} />
@@ -20,19 +23,23 @@ class LandingContainer extends ReactComponent {
 
 const mapStateToProps = (state) => {
     const articles = selectArticles(state);
+    const posts = selectPosts(state);
     return {
-        tiles: articles || []
+        tiles: articles || [],
+        socialItems: posts || []
     }
 }
 
 const mapActionsToDispatch = (dispatch) => ({
-    init: () => dispatch( getArticles() )
+    loadArticles: () => dispatch( getArticles() ),
+    loadPosts: () => dispatch( getPosts() )
 });
 
 const mergeProps = (state, actions) => ({
     ...state,
     ...actions,
-    init: () => actions.init()
+    loadArticles: () => actions.loadArticles(),
+    loadPosts: () => actions.loadPosts()
 });
 
 export default connect(mapStateToProps, mapActionsToDispatch, mergeProps)(LandingContainer);

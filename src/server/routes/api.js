@@ -37,4 +37,9 @@ router.get('/articles',cors(), (req, res) => {
         });
 });
 
+router.get('/posts', cors(), (req, res) => {
+    const twitterData = require('../twitter.json').statuses;
+    res.send( twitterData.map( ({text: message, user}) => ({ message, handle: user.screen_name, avatar: user.profile_image_url_https})) );
+});
+
 export default router;

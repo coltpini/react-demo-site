@@ -2,9 +2,9 @@ import {ADD_ARTICLE, CLEAR_ARTICLES} from './reducers.js';
 import getArticleList from './services.js';
 
 /* Sync Action Creators */
-export const addArticle = (articles = []) => ({
+export const addArticle = (article = []) => ({
     type: ADD_ARTICLE,
-    articles: articles
+    article: article
 });
 
 export const clearArticles = () => ({type: CLEAR_ARTICLES});
